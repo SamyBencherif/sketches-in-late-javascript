@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <!-- This file is used to tell the browser how to deal with our game -->
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+
+    <body>
+
+        <!-- This tag represents our drawing space within a sketch -->
+        <canvas id="sketch-canvas" class="hidden"></canvas>
+
+        <!-- This tag represents the directory listing of games -->
+        <div id="directory-listing">
+            <a onclick="interactive.play(wishingwell)" href="#">Boisterous.exe</a>
+            <a onclick="interactive.play(artofwar)" href="#">Art-Of-War.exe</a>
+            <a onclick="interactive.play(likeitspoetry)" href="#">Like-Its-Poetry.exe</a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+            <a></a>
+        </div>
+
+        <script src="InteractivityAPI.js"></script>
+        <script src="sketches/boisterous.js"></script>
+        <script src="sketches/art-of-war.js"></script>
+        <script src="sketches/like-its-poetry.js"></script>
+    </body>
+</html>

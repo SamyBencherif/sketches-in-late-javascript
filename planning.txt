@@ -1,0 +1,350 @@
+
+FOREWORD
+
+I am wanting to make an inspired game. A series of small digital
+experiences. I draw obvious inspiration from The Beginner's Guide, but
+I am a programmer, I've always been. Making and abandoning little
+sketches has always been a part of my identity. I digress. This game
+will consist of a little file browser and small javascript applets.
+
+I will provide a small API for myself, based on previous projects like
+SimpleRender and GL12 and others. This one will be designed to be
+minimal, in source and content. Abstract away canvas creation and 
+neatly expose polygon drawing. Accept keyboard and mouse input with
+grace. That is all. I will not provide any other features to the
+"client" programmes, because I want each one to have its own unique
+approaches to design challenges.
+
+TECHNICAL NOTES
+
+Because there is some setup needed to make the web browser into a game
+environment (canvas creation, input delegation, DOM management, ...),
+I will need to differentiate between the directory listings available
+to programmers and available to players. The source directory listing
+will contain some of the files needed to get things up and running that
+are not interesting to the player.
+
+SOURCE DIRECTORY LISTING
+
+InteractivityAPI.js
+sketches/
+    lvl1.js
+    lvl2.js
+    lvl3.js
+index.html
+
+GAME DIRECTORY LISTING
+
+lvl1
+lvl2
+lvl3
+
+P.S. The game listing will simply be in the order that I want you to
+play them in, not alphebetical or anything. The official ordering will
+likely be programmed in index.html. Obviously most file browsers will
+want to order the files in some standard way.
+
+EMOTIONAL NOTES
+
+I want to design these sketches to elicit a natural curiosity about
+their inner workings. This game is about "the love of code", in a way.
+I will write my light abstraction layers (1) for my peace of mind and
+(2) I want reading the code to be inspiring and sensible for the reader. 
+I don't want them to be bogged down by web tech quirks.
+
+I want anyone to be able to read my code. It's part of the game. That
+being said, I do not have the skill to make the game interesting and
+the code super easy at the same time. I will put in writing that I will 
+make an effort to comment my code, but we'll see how that goes.
+
+CONTENT PLANNING
+
+I think the most reasonable way to go about content planning is to
+start broad then focus in. I want the game to have quirky behaviors and
+each program should feel like it belongs in a different mental realm.
+The programs should have titles like those of poetry or children. I
+want to show that code can be inspiring. Poor software engineers at NC
+State have probably forgetten this.
+
+So the user can navigate the little file explorer (I'm thinking no
+need for subdirectories) and click on programs. When they open, it will
+say something stupid like "Press ESC to end this adventure.", and that
+will send you back to the "home screen".
+
+Now I will describe each program.
+
+PROGRAM A "Wishing Well"
+
+Okay. The first program is one where you have a white square in the
+middle of a dark green screen. When you click it, it opens up and spins
+a little, and there is a darker green square inside. The remnants of
+the white square will fade and the green square will say "I wasn't
+planning on meeting you this way." then drop out of screen. Nothing
+will happen after that and the player will be frustrated. It is 
+important to check the source code if you are very stuck in this game,
+but that will never be required to find the solution. Turns out, if you
+click and drag the whole screen moves, revealing white underneath. Here
+there is a tiny pink square. [1] They say "Do you think the little 
+green square is going to come back?" unaware that they are littler.
+Here we will actually present the player the ability to speak. "Maybe"
+or "No." if they say "Maybe", the new square will say something like
+"Gosh, I sure hope so." and if they so "No," they will say "That's 
+unfortunate." Other things might happen too, after that. I suppose the
+central theme of this sketch is "dealing with situations in which 
+things do not go as planned". Thus the title should be... 
+"Unreliable"
+"Boisterous"
+"The Surpise Party"... no that one's stupid
+"Wishing Well"
+
+Also, I might present these as "wishing-well.exe" and such, just
+because that is more fun. I might try to make my directory listing
+look something like Windows XP too.
+
+PROGRAM B
+
+I am weirdly afraid this idea is unoriginal, but I think I want this 
+one to be called "Card Dealer" or something like that. Here I submit
+that I take inspiration from Hofstaders reference to a list of wackily
+titled small graphical programmes mentioned in G.E.B. I just hope this
+isn't a copy of the one title that most inspired me (which I actually
+do not consciouslly remember!). This program features another dark
+green background and has a brown table top, rendered with the simplest
+notion of perspective ever. There are facedown cards, in a similar
+isometric 3d representation (rectangles become slanted, that's it). The
+player can click on the cards but only the 3rd one out of four will do
+anything. It will reveal itself to be an Ace. As it reveals itself a
+facedown deck of presumably 48 cards appears on the table. I'm thinking
+I'll do something stupid like make the player type A-C-E to proceed or
+something.
+
+PROGRAM C
+
+I realize the first two programs might be frustrating, and I don't want
+every program to frustrating. If it's just the first two that would be
+fine actually, because it teaches the behavior of "skip this and maybe
+come back to it", don't give up because the first (or second) thing
+you look at is impossible. You should keep going so you find the easy
+one. That's what this program should be. Perhaps it is easy to play
+with, but slightly non-trivial to solve? And there are tiers to this
+one's gameplay, so I can reward you for solving little sub challenges.
+That being said, the spirit of this project is to make each sketch
+fairly simple. I'm not going to enforce line count limits (that would
+be hell), but think 300 lines or something. That is, the emotional
+pain of developing this program should be reasonably close to that of
+the average 300 line program. I don't care if it's 500 lines, as long
+as the emotional value of it is in check.
+
+I haven't even talked about what this program is at all. I'm imagining
+something like a chessboard. I hope that is not boring. Or maybe some
+object follows the cursor around and the player has to get rid of it
+by shaking hard. Maybe the game starts with the caption "Escape the 
+Bees", only there are no bees, instead the player must play a slow
+paced made up board game. It would look like the game of LIFE kind of.
+
+Right now, I have "Escape the Bees" and a peculiar bouncing ball that
+changes color when you click it.
+
+Maybe you can roll dice, and move a little thingie from step to step.
+You "play" a few rounds and the game says silly yet vaguely encouraging
+things to you. At step number 4 will come the first important decision.
+If the user fails here, a red "YOU'VE BEEN BANNED" message will appear
+and they will be kicked to the homescreen. When they return the game
+will restart like normal. The important decision has four choices. 
+Maybe I could do something stupid like ask 
+"What is the right question?" and have it where clicking any of the 
+"answer"-questions is wrong but clicking the question itself is right?
+I think that might be too stupid. Plus it is sort of frustrating for
+something that's supposed to be the easy level. Anyway, once our hero
+passes the test, they will be asked to roll a 150 sided dice. The 
+concept will be so absurd it will "break the game". At one point, they
+will be floating in space (it will be simple, stars are just white 
+pixels), and nothing will happen for a 3-5 seconds. Then objects will
+fly by, meteorites maybe? The player needs to click on the right one.
+When they do, the scene will switch and we will be on the meteorite
+talking to a martian. The martian might do something silly like speak
+a bunch of earth languages except for english, somehow, before 
+discovering how to speak your language in an equally ludicrous way.
+Then he will say something stupid like, "do you know where the bathroom
+is?", and the player will be left to ponder why this alien is on this
+rock and how they would relieve themselves. Is it the same way? At some
+point the user will have a dialog point asking the alien this question
+which will trigger some bad outcome. Maybe the outcome is a fight,
+which constrasts the board-game / talking gameplay we've had so far,
+there are little guns and bullets. Spaceships would be appropriate too.
+This sketch ends when a peace treaty is drafted, or when someone dies.
+
+PROGRAM D
+
+I start with the message "This game only works if the screen is
+upside down." Obviously turning the screen upside down will do nothing.
+Uhh.. What will do something? Oh I got it. Staring at the screen for 
+like, idk, 6 seconds will proceed to the next thing. Maybe this teaches
+the player to be patient or something? Probably not. After that there
+will be another challenging message, which the player might think they
+can solve the same way (waiting), but that will not work. It might say
+"This game only works if you are happy." The solution is to shake the
+mouse violently within the game window. When the player does this, the
+blue screen will pan out like an 80's movie effect, and there will be a
+different screen that says "Congratulations, you are winner!", but that
+is not the end of the game. This screen will let you click and drag to
+move the letters around. When they player discovers this, they might
+try to spell various things. When they spell "i lost", the screen will
+become orange, and when they add the exclamation point the next thing
+will happen. The letters will move or change in some way and make a
+distressing message like, "Don't trust these messages," or something.
+That's it.
+
+
+PROGRAM E
+
+This program will have a title like "Ice Cream Concoction", which will
+not make much sense. The user will have a little box where they can
+type messages, but instead of going left to right, the letters are
+filled in in random order. The player will distract themselves typing
+things in, related to ice cream, until they notice something at the 
+very bottom of the screen. There will be a very small black inch-worm
+crawling across. It will be aware of the mouse cursor. If the cursor
+gets too close it will get scared and run away. (Literally the same
+thing as the cat from the Wii Photos App, except it's a worm, and this
+is a different game, and it does something different when you catch it.
+) When they catch the worm it will say something slightly macabre like
+"Please don't kill me, I haven't paid off my Morgage yet." and the
+player will have a choice to kill it or let it live. The choice should
+be presented in a dramatic way, like a giant red KILL button and a tiny
+green link that says "spare", or something like that. Killing the bug
+awards the player with million dollars of in game currency. The
+currency cannot be spent on anything. Saving the bug gives the player
+a million dollars of debt. After, the program will say something witty
+that makes the literary significance of this experience apparently to 
+the studious player. Once the player has played multiple times (doing
+both the killing way and the sparing way), the game will present a less
+sarcastic morale. But the morale will still be pretty sarcastic.
+
+PROGRAM F
+
+This program is a blank white screen that the player can draw on with
+a purple crayon. It is an obvious reference to the children's book. 
+If the player draws anything fallic (there will be a very low-bar for 
+the detection algorithm for that) then it will explode (also low-bar on
+explode animation, literally just do (vertex.position - centroid)*1.01
+in the update loop, or something). There is an unprecendented technical
+challenge with this one, because putting any significant outcomes that
+require me to detect their drawing would be unweildy. To solve this
+problem I will make the crayon diminish in size, allowing for about
+30 to 40 seconds of meaninful doodling. The player will be able to 
+reflect and enjoy themselves during this time. When the crayon is done
+the screen will vibrate slightly and become warmer (use color red plus
+blur affect). Then it will immediately stop and go back to how it was
+a second ago. After 4 seconds, the drawings will simply vanish. The 
+player is now presented an orange crayon. The same nonsense will repeat
+for another color. The player will follow through with these antics out
+of sheer curiosity. I hope. After the last drawing disappears a frog 
+on a rock will appear. The game will appear to be unresponsive to any
+player action. The player might try many things with the mouse, because
+those were the solutions before, when they type "frog" the frog will
+say "Yes?". The player should feel bewildered and perhaps a little 
+angry. "What the hell is this game?" they will say to themselves. The
+frog will respond to the player's internal dialog with an unwelcome
+existential remark, "Why do you feel so lost, child?". Now the player
+has dialog choices. (A) "Where is the key?" (B) "Who are you?" and (C)
+"Take me back to the beginning." 
+
+(A)
+    "It's right under this rock." The frog will hop off the rock, and
+    the player can lift it up with the mouse. Under the rock there is
+    a clip-art style (or actual photo, not sure yet) picture of a cake.
+    It is a reference to Portal 1. The player can click the cake to add
+    it to their inventory. The player will be awarded an inventory when
+    they click the cake, and the inventory can only hold cakes. It will
+    be called "Cake Inventory".
+
+(B)
+    Just, "I am a frog, and that was a stupid question."
+    Also it makes the game black & white for 30 minutes.
+    As further punishment, the program after this (Program G) will be
+    heavily reliant on color queues. (i.e. a puzzle that just says 
+    click the yellow square to pass.
+
+(C)
+    This selection will do something very unexpected.
+
+
+Program G
+
+It will start with some unskippable cutscene. It will contain an
+aimless dialog between a mother and a child. The mother is explaining
+to her child that she is divorcing the child's other parent. The game
+will subsequently become interactive again. There will be a field, a
+river, a blue ball, a red ball, a gopher hole, and a swing set with
+two swings. The graphics will be MS Paint level quality (and code 
+generated, like everything else). The things that seem like they should
+be able to move can move. The physics will be simple bullet physics 
+with one sided surface-plane collisions. When the child puts the red 
+ball in the gopher hole (matrix reference?), the ball will fall in,
+never to be seen again. When the child puts the blue ball in, nothing 
+will happen for 3 seconds, then it will shoot back out of the hole 
+(making an arc). I will add 1 second to the wait every time they do
+this. After the 3rd or 4th time I will take the ball for a fair bit
+longer than expected and make them fear they've lost their ball. When
+they get it back, if they put immediately back in, I will throw it 
+right back out. (To teach the player not to worry.. not that this is a
+teaching game). If they had already sacrificed the red ball they will
+get it back too. After that, If they put any ball back in the hole, it 
+will be taken awyay forever. The swing set can be swayed slightly with
+the mouse, that is all. It symbolizes childhood, or something. The
+balls do not interact with the swings, as that would require needless
+effort in the physics design. They fall right through. If the player 
+throws the red ball in the river, it comes right back, without fail,
+every time. If they throw the blue ball in the river it will not come
+back until they sacrifice the red ball in the gopher hole. The game
+is capable of continuing until the player reaches the "both balls lost
+forever" state, (they can also always press ESC to go back to the home
+screen). Once they lose both balls, nothing will happen for 3 seconds,
+to let the sorrow sink in. This teaches the player, "actually, yes, you
+should worry." But the morale will contradict itself again, this time
+it will be lighthearted and kind to our poor protagonist. It will 
+verbally reward them, for playing the game, and tell them that the 
+objects they lost are not important. Loss is inevitable.
+
+PROGRAM H
+
+Okay. This program starts as an actual chessboard. There is a single
+pawn on the board. The player can move it as if it was a chess game 
+(first they select the pawn, then the space where to move it.) Every
+time they make a move a different chess piece appears somewhere 
+unexpected on the board. It will go: the initial pawn, a night, the
+queen, a rook, and finally a pawn of the opposite color. The orignal
+pawn color is decided randomly at the start of each game session. The
+colors will be beige and deep brown. After four legal chess moves, in 
+small print on the side of the board (which will look like a 3d prism),
+there will be an encoded message. I will replace the letters of an
+english sentence with different symbols in a consistent way. This kind
+of code is easy to break, because you can determine the meaning of each
+symbol by looking at one letter and three letter words which are almost
+always "I", "a", "and", or "the". The message might be
+
+"Of mice and men was not a good book."
+
+Which I totally disagree with, but that's not the point. In fact, it's
+only when the player drags the (still encoded) word "not" out of the 
+sentence that the game proceeds. It was a fairly good book. No
+complaints really. Haven't thought about it much until now. I may
+include further reflections about the book after the player solves
+this puzzle. Also, I need a way to prevent them from finding the
+answer by randomly clicking around. I want them to actually decode it.
+Ok I think I got it. I will spawn a little waste bin next to the
+sentence, and they can throw away words. The game proceeds only if they
+throw away "not". They can restart if they throw away a word that they
+need.
+
+AFTERWORD
+
+I am tired from typing all this up, so now I will go to implement these
+in code.
+
+
+[1] I've decided I want to make all my abstract characters genderless,
+unless there is meaning behind their gender. The meaning does not have
+to be very concrete. Also I will be using "They", "Them", and 
+"Themselves" as genderless singular pronouns.
